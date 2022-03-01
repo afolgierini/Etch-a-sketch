@@ -12,9 +12,10 @@ const newColor = document.querySelector('.newcolor');
 const btnblack = document.querySelector('.btnblack');
 const btneraser = document.querySelector('.btneraser');
 const btnrainbow = document.querySelector('.btnrainbow');
+const btnclear = document.querySelector('.btnclear')
 
 
-// Changes the 'color' value whenever the 'HTML color input' is used.
+// Remove the rainbow EventListener and changes the 'color' value whenever the 'HTML color input' is used.
 newColor.addEventListener('input', e => {
     for(i = size * size; i >= 1; i--){
         square[i] = document.getElementById(`row${i}`);
@@ -23,8 +24,7 @@ newColor.addEventListener('input', e => {
     color = newColor.value;
 })
 
-
-// Set the 'color' to black when the button is pressed.
+// Remove the rainbow EventListener and set the 'color' to black when the button is pressed.
 btnblack.addEventListener('click', e => {
     for(i = size * size; i >= 1; i--){
         square[i] = document.getElementById(`row${i}`);
@@ -33,8 +33,7 @@ btnblack.addEventListener('click', e => {
     color = 'black';
 })
 
-
-// Set the 'color' tho white when the button is pressed.
+//Remove the rainbow EventListener and set the 'color' to white when the button is pressed.
 btneraser.addEventListener('click', e => {
     for(i = size * size; i >= 1; i--){
         square[i] = document.getElementById(`row${i}`);
@@ -43,20 +42,25 @@ btneraser.addEventListener('click', e => {
     color = 'white';
 })
 
-
 // Get a random color from the 'colors' array.
 const randomColor = () => {
     color = colors[Math.floor(Math.random() * (colors.length - 1))]; 
 }
 
-
-// AddEventListener that sets the the 'color' to rainbow.
+// Sets the the 'color' to rainbow.
 btnrainbow.addEventListener('click', e => {
     for(i = 1; i <= size * size; i++){
         square[i] = document.getElementById(`row${i}`);
         square[i].addEventListener('mouseover', randomColor);
     }       
 });
+
+// Clear the entire board
+btnclear.addEventListener('click', e => {
+    for(i = 1; i <= size * size; i++){
+        square[i].style.backgroundColor = 'white'   
+    }
+})
 
 // Prompt asking the user to insert the grid SIZE to a limit of 100.
 const getSize = () => {
@@ -66,8 +70,6 @@ const getSize = () => {
         size = prompt('Insert the grid size. (Maximum 100)')
     }    
 }
-
-
 
 // Create the grid with flexbox using the SIZE as parameter.
 const createGrid = (size) => { 
@@ -88,7 +90,6 @@ const createGrid = (size) => {
     }
 }
 
-
 // Add the event 'mouseover' with the function to paint the divs with the selected color.
 const addPaintFunction = () => {
     for(i = 1; i <= size * size; i++){
@@ -99,10 +100,6 @@ const addPaintFunction = () => {
     }            
 }
  
-
-
-
-
 // Asks for size;  Create the grid;  Add 'mouseover' paint function.
 const play = () => {
     getSize();
@@ -111,9 +108,4 @@ const play = () => {
 }
 
 
-
-
-
-
 play();
-
