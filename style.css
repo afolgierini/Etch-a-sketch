@@ -11,18 +11,89 @@
 
 
 body{
-    display: flx;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(68.15deg, #2c1a1a 16.62%, #85584e 85.61%);
+    width: 100%;
+    height: 100%;
 }
 
 #title{
     font-family: 'Dancing Script';
-    font-size: 62px;
+    font-size: 74px;
+    margin-top: 16px;
+    color: rgb(226, 129, 17);
+}
+
+.options{
+    margin-bottom: 10px;
+    margin-top: 14px;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.colorspan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .newcolor{
-   border-color: red;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background-color: transparent;
+   width: 50px;
+   height: 46px;
+   border: none;
+   cursor: pointer; 
+}
+
+.newcolor::-webkit-color-swatch{
+    border: 2px solid rgb(226, 129, 17);
+    border-radius: 50%px;
+    box-shadow: 0 0 4px rgb(82, 82, 82);
+}
+
+.newcolor::-moz-color-swatch{
+    border: 2px solid rgb(226, 129, 17);
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgb(82, 82, 82);
+}
+
+.btnblack, .btnrainbow, .btneraser, .btnclear{
+    width: 97px;
+    height: 30px;
+    font-family: 'Dancing Spirit';
+    font-size: 16px;
+    border-color: rgb(255, 180, 40);
+    border-radius: 4px;
+    background-color: rgb(255, 136, 0);
+}
+
+.btnsize{
+    width: 120px;
+    height: 30px;
+    font-family: 'Dancing Spirit';
+    font-size: 16px;
+    border-color: rgb(255, 180, 40);
+    border-radius: 4px;
+    background-color: rgb(255, 136, 0);
+}
+
+.btnblack:hover, .btnrainbow:hover, .btneraser:hover, .btnclear:hover, .btnsize:hover{
+   background-color: rgb(255,102, 0); 
+   transform: scale(1.08);
+   border-color: rgb(255, 136, 0);
+   font-size: 15px;
 }
 
 #outcontainer{
@@ -32,23 +103,24 @@ body{
 }
 
 .margincontainer{
-    background-color: rgb(68, 68, 68);
+    background-color: rgb(95, 62, 62);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 720px;
-    height: 720px;
-    box-shadow: 0 0 20px 20px rgb(155, 154, 154);
+    width: 650px;
+    height: 650px;
+    box-shadow: 0 0 15px  rgb(32, 25, 25);
+    border-radius: 7px;
 }
 
 
 .container{
     background: rgb(255, 255, 255);
-    width: 650px; 
-    height: 650px;
+    width: 580px; 
+    height: 580px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0  12px 12px rgb(155, 154, 154);
+    box-shadow: 0 0  12px 12px rgb(170, 145, 145);
 }
 
 .lines{
@@ -68,4 +140,26 @@ body{
     flex-direction: row;
 }
 
+.completerFlex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
+.completer{
+    width: 100%;
+    height: 100%;
+}
+
+
+.footer{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    margin-top: 50px;
+    border-top: 1px solid rgb(94, 46, 46);
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(207, 139, 61);
+}

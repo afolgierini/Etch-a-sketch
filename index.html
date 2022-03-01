@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div>
         <h1 id="title">Etch-a-Sketch</h1>
     </div>
     
     <div class="options">
-        <input type="color" class="newcolor" name="">
+        <span class="colorspan">
+            <input type="color" class="newcolor" name="">
+        </span>
         <button class="btnblack">BLACK</button>
         <button class="btnrainbow">RAINBOW</button>
         <button class="btneraser">ERASER</button>
-        <button class="btnclear">CLEAR</button>
-        <a href="index.html"><button>CHANGE SIZE</button></a>
+        <button class="btnclear">CLEAR ALL</button>
+        <a href="index.html"><button class="btnsize">CHANGE SIZE</button></a>
     </div>
 
     
@@ -31,10 +32,19 @@
         </div>
     </div>
 
+    <div class="completerFlex">
+        <div class="completer">
+            
+        </div>
+
+        <footer class="footer">
+            <p>Copyright © Alexandre Folgierini</p>
+        </footer>
+    </div>
 
 
 
     <script src="app.js"></script>
-    
+
 </body>
 </html>
