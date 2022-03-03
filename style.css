@@ -57,6 +57,10 @@ body{
    cursor: pointer; 
 }
 
+.newcolor:hover{
+    transform: scale(1.08);
+}
+
 .newcolor::-webkit-color-swatch{
     border: 2px solid rgb(226, 129, 17);
     border-radius: 50%px;
