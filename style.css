@@ -58,7 +58,7 @@ body{
 }
 
 .newcolor:hover{
-    transform: scale(1.08);
+    transform: scale(1.10);
 }
 
 .newcolor::-webkit-color-swatch{
