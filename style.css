@@ -157,11 +157,11 @@ body{
 .footer{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 14px;
-    margin-top: 50px;
+    margin-top: 56px;
     border-top: 1px solid rgb(94, 46, 46);
     display: flex;
     justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     color: rgb(207, 139, 61);
 }
