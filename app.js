@@ -96,6 +96,7 @@ const addPaintFunction = () => {
         square[i] = document.getElementById(`row${i}`);
         square[i].addEventListener('mouseover', e => {
             e.target.style.backgroundColor = color;
+        });
     }            
 }
  
