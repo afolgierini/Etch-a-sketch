@@ -20,6 +20,7 @@ newColor.addEventListener('input', e => {
     for(i = size * size; i >= 1; i--){
         square[i] = document.getElementById(`row${i}`);
         square[i].removeEventListener('mouseover', randomColor);
+        square[i].removeEventListener('touchenter', randomColor);
     } 
     color = newColor.value;
 })
@@ -29,6 +30,7 @@ btnblack.addEventListener('click', e => {
     for(i = size * size; i >= 1; i--){
         square[i] = document.getElementById(`row${i}`);
         square[i].removeEventListener('mouseover', randomColor);
+        square[i].removeEventListener('touchenter', randomColor);
     } 
     color = 'black';
 })
@@ -38,6 +40,7 @@ btneraser.addEventListener('click', e => {
     for(i = size * size; i >= 1; i--){
         square[i] = document.getElementById(`row${i}`);
         square[i].removeEventListener('mouseover', randomColor);
+        square[i].removeEventListener('touchenter', randomColor);
     }  
     color = 'white';
 })
@@ -52,6 +55,7 @@ btnrainbow.addEventListener('click', e => {
     for(i = 1; i <= size * size; i++){
         square[i] = document.getElementById(`row${i}`);
         square[i].addEventListener('mouseover', randomColor);
+        square[i].addEventListener('touchenter', randomColor);
     }       
 });
 
@@ -96,7 +100,10 @@ const addPaintFunction = () => {
         square[i] = document.getElementById(`row${i}`);
         square[i].addEventListener('mouseover', e => {
             e.target.style.backgroundColor = color;
-        }) 
+        });
+        square[i].addEventListener('touchenter', e => {
+            e.target.style.backgroundColor = color;
+        });
     }            
 }
  
