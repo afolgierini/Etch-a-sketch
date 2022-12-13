@@ -1,5 +1,4 @@
-# Etch-a-sketch_TOP
-
+# Etch-a-sketch
 Etch-a-Sketch built to practice "DOM Event Manipulation".
 
 > Exercise from The Odin Project course.
